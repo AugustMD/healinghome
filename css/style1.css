@@ -1,0 +1,108 @@
+/***********************************************************/
+/********************* 광고 및 상세 검색 ***********************/
+/***********************************************************/
+/* 광고 틀 및 배경 */
+.advertisement {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    background: #fff url(../img/main1.jpeg) no-repeat 60% 0;
+    background-size: cover;
+}
+
+.advertisement-img {
+    text-align: center;
+}
+
+/* 광고 이미지 */
+.advertisement img {
+    margin-top: 250px;
+    max-width: 400px;
+}
+
+/* 상세 검색 */
+.detail-search {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+}
+
+.detail-search .detail-location {
+    width: 165%;
+    display: flex;
+}
+
+.detail-search .detail-check {
+    width: 100%;
+    display: flex;
+}
+
+.item2-search {
+    position: relative;
+    left: 5%;
+}
+
+/* 지역 */
+.item2-search:nth-child(1) {
+    flex-basis: 16%;
+}
+
+/* 상세지역 */
+.item2-search:nth-child(2) {
+    flex-basis: 16%;
+}
+
+/* 체크인 */
+.item2-search:nth-child(3) {
+    flex-basis: 16%;
+}
+
+/* 체크아웃 */
+.item2-search:nth-child(4) {
+    flex-basis: 16%;
+}
+
+/* 인원수 */
+.item2-search:nth-child(5) {
+    display: flex;
+    flex-basis: 16%;
+}
+
+/* 검색 */
+.item2-search:nth-child(6) {
+    flex-basis: 16%;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+    color: #fff;
+}
+
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
+.white-panel span {
+    display: block;
+    color: #999;
+    font-size: .7rem;
+    margin-bottom: .5rem;
+}

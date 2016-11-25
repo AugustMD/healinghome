@@ -1,0 +1,71 @@
+.container-fluid.top {
+    background: #EDEFF2;
+    height: 180px;
+    padding-top: 27px;
+}
+
+.col-xs-3 h4 {
+  text-align: center;
+  margin-bottom: 10px;
+  color:#A8A9AA;
+  font-size: 15px;
+}
+
+.circle-icon {
+  text-align: center;
+}
+
+.circle-icon .glyphicon {
+        background-color: #9099A9;
+        color: white;
+        padding: 20px;
+        font-size: 1.6em;
+        border-radius: 50%;
+}
+
+.circle-icon .glyphicon-send {
+        padding: 20px 22px 20px 18px;
+}
+
+.spanStatus {
+   font-weight: 100;
+   font-size: 3.2em;
+   vertical-align: sub;
+   padding-left: 15px;
+   color:dimgrey;
+}
+
+.container-fluid.content {
+    padding-top: 27px;
+    width: 80%;
+}
+
+.container-fluid.content p{
+   font-weight: normal;
+   font-size: 12px;
+   color: grey;
+   margin-bottom: 2px;
+}
+
+.container-fluid.content th {
+    padding-left: 5%;
+    vertical-align: middle;
+}
+
+.container-fluid.content td {
+   vertical-align: middle;
+   text-align: center;
+}
+
+.container-fluid.content h5 {
+   font-size: 16px;
+   margin-bottom: 5px;
+}
+
+.container-fluid.content h6 {
+   margin-top: 0px;
+}
+
+td img {
+  margin: 10px 0px;
+}

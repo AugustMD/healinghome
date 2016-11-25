@@ -1,0 +1,73 @@
+
+#myCarousel .nav a small {
+    display:block;
+}
+#myCarousel .nav {
+	background:#eee;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}
+
+.nav-pills>li[data-slide-to="0"].active a { background-color: #16a085; }
+.nav-pills>li[data-slide-to="1"].active a { background-color: #e67e22; }
+.nav-pills>li[data-slide-to="2"].active a { background-color: #2980b9; }
+.nav-pills>li[data-slide-to="3"].active a { background-color: #8e44ad; }
+
+.nav li>a {
+  color: dimgray;
+}
+
+.nav li>img {
+  width: 100%;
+  margin: 0;
+}
+
+.item .button {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: #FB464C;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.item .button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.item .button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.item .button:hover span {
+  padding-right: 25px;
+}
+
+.item .button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.manual .container-fluid {
+   width: 80%;
+}
+
+.manual .container-fluid p{
+   color: dimgray;
+   font-size: 13px;
+}

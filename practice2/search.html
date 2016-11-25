@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style1-search.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-pinterest.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-calendar.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-uppertool.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/calendar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pinterest-search.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+    <!--=================================== 상단 툴바 ===================================-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="border-bottom-width:2px; background-color: #fff;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand topnav" href="./index.html" style="color: #FB464C;"><strong>HealingHome</strong></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-sm-offset-2 col-md-5 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">로그인</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./service.html" style="text-decoration: none; color: #FB464C;">고객센터</a></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=================================== 로그인 모달 ===================================-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">로그인</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">로그인</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>아직 가입을 안하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=================================== 회원가입 모달 ===================================-->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">회원가입</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="name">이름:</label>
+                            <div class="col-sm-8">
+                                <input type="name" class="form-control" id="name" placeholder="이름을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pnumber">휴대폰번호:</label>
+                            <div class="col col-sm-8">
+                                <input type="phone-number" class="form-control" id="pnumber" placeholder="'-'없이 입력하시오">
+                                <div class="col-sm-offset-1">
+                                    <button type="submit" class="btn btn-default">실명확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">가입하기</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>이미 가입하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal">로그인</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!--=================================== 좌측 메뉴 ===================================-->
+        <!-- 상세 검색 및 검색 결과 -->
+        <div class="col-md-7">
+            <!-- 상세 검색 -->
+            <div class="search-menu">
+                <!-- 지역 및 상세지역 -->
+                <div class="search-menu1">
+                    <h5>지역</h5>
+                    <div class="search-items"><input type="text" class="form-control" placeholder="지역"></div>
+                    <div class="search-items" style="padding-left:15px;"><input type="text" class="form-control" placeholder="상세지역"></div>
+                </div>
+                <!-- 체크인 및 체크아웃 -->
+                <div class="search-menu1">
+                    <h5>날짜</h5>
+                    <div class="search-items"><input type="text" id="datepicker1" class="form-control" placeholder="체크인"></div>
+                    <div class="search-items" style="padding-left:15px;"><input type="text" id="datepicker2" class="form-control" placeholder="체크아웃"></div>
+
+                </div>
+                <!-- 숙박 인원 / 가격 설정 / 필터 / 검색 -->
+                <div class="search-menu1" style="height:75px;">
+                    <h5>가격 및 인원</h5>
+
+                        <div class="search-items">
+                            <select class="form-control">
+                              <option>~5만원</option>
+                              <option>5만원~10만원</option>
+                              <option>10만원~20만원</option>
+                              <option>20만원~30만원</option>
+                              <option>30만원~</option>
+                          </select>
+                        </div>
+
+                        <div class="search-items" style="padding-left:15px;">
+                            <select class="form-control">
+                                <option>숙박인원 1명</option>
+                                <option>숙박인원 2명</option>
+                                <option>숙박인원 3명</option>
+                                <option>숙박인원 4명</option>
+                            </select>
+                        </div>
+                </div>
+
+                <!--==================== 검색 결과 ==================-->
+                <div class="filter">
+                    <div class="btn-group pull-right" role="group" style="padding-top: 2px;">
+                        <button type="button" class="btn btn-default">가격순</button>
+                        <button type="button" class="btn btn-default">평점순</button>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <section id="pinBoot">
+
+                        <article class="white-panel"><img src="https://a1.muscache.com/im/pictures/c69ae6d0-5eeb-4c69-a017-8e8d2a47ceab.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">24,000원</h4>
+                                <h4><a href="./house.html">[강화도] 강화 고벵이 펜션</a></h4>
+                                <p>#남이섬과 5분 거리</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a2.muscache.com/im/pictures/01567841-317b-4d4a-86c8-94f2d59f732c.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">19,000원</h4>
+                                <h4><a href="./house.html">[평창군] 평창 선녀와 나무꾼</a></h4>
+                                <p>#주요 관광지와 10분 거리</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">23 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a1.muscache.com/im/pictures/10d60248-8050-4427-b6f8-60aca7f65a38.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">54,000원</h4>
+                                <h4><a href="./house.html">[안면도] 태안 두바다찬솔타운</a></h4>
+                                <p>#바다가 보이는 테라스 보유</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">11 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </article>
+
+
+                        <article class="white-panel"> <img src="https://a1.muscache.com/im/pictures/6e1aea9a-48c2-4e13-8b41-8c56a551b785.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">74,000원</h4>
+                                <h4><a href="./house.html">[거제도] 거제 애플 풀빌라</a></h4>
+                                <p>#주요 관광지와 걸어서 5분거리</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">22 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a1.muscache.com/im/pictures/6e1aea9a-48c2-4e13-8b41-8c56a551b785.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">88,000원</h4>
+                                <h4><a href="./house.html">[해남군] 해남 솔가 펜션</a></h4>
+                                <p>#바베큐 시설 완비 무료 이용 가능</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">14 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a1.muscache.com/im/pictures/1191112d-0e85-4987-b1e2-96f701d8605d.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">17,000원</h4>
+                                <h4><a href="./house.html">[영덕] 영덕 비사이드 비치</a></h4>
+                                <p>#집주인이 직접 잡은 대게</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">151 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a0.muscache.com/im/pictures/54657772-7a13-4139-ab2d-0cfe9197406e.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">52,000원</h4>
+                                <h4><a href="./house.html">[춘천] 춘천 피에스타</a></h4>
+                                <p>#춘천역에서 5분거리</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">52 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="white-panel"> <img src="https://a0.muscache.com/im/pictures/80227058/81bf264e_original.jpg?aki_policy=x_medium" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">17,000원</h4>
+                                <h4><a href="./house.html">[남양주] 남양주 코지힐</a></h4>
+                                <p>#바베큐 시설 완비 무료 이용 가능</p>
+                            </div>
+
+                            <div class="ratings">
+                                <p class="pull-right">7 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+
+        <!--=================================== 우측 메뉴 ===================================-->
+        <!-- 지도 -->
+        <div class="col-md-5" style="padding-left: 0px;">
+            <div id="map"></div>
+            <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7a297cffb2223c9ae48c91f0f766d82e"></script>
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new daum.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+                var map = new daum.maps.Map(container, options);
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

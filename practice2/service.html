@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="./css/style1-customer.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="./css/style1-uppertool.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+    <!--=================================== 상단 툴바 ===================================-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="border-bottom-width:2px; background-color: #fff;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="./index.html" style="color: #FB464C;"><strong>HealingHome</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-sm-offset-2 col-md-5 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">
+                          <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">로그인</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./service.html" style="text-decoration: none; color: #FB464C;">고객센터</a></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=================================== 로그인 모달 ===================================-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">로그인</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">로그인</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>아직 가입을 안하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=================================== 회원가입 모달 ===================================-->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">회원가입</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="name">이름:</label>
+                            <div class="col-sm-8">
+                                <input type="name" class="form-control" id="name" placeholder="이름을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pnumber">휴대폰번호:</label>
+                            <div class="col col-sm-8">
+                                <input type="phone-number" class="form-control" id="pnumber" placeholder="'-'없이 입력하시오">
+                                <div class="col-sm-offset-1">
+                                    <button type="submit" class="btn btn-default">실명확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">가입하기</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>이미 가입하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal">로그인</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="left-side-margin">
+          <div class="SMjumbo">
+            <h1>고객만족센터</h1>
+            <p>HealingHome 회원님들을 위해 향상 노력하는 고객만족센터입니다.</p>
+            <h1>CALL</h1>
+            <h2>1599-3120</h2>
+            <p>평일 AM 10:00 ~ PM 05:00</p>
+            <p>주말 및 공휴일 제외</p>
+
+          </div>
+          <hr>
+          <div class="write">
+            <a href="./service_write.html">
+            <button type="button" class="btn btn-default" style="font-size:11px; margin-bottom:10px; padding: 5px 10px 5px 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="padding-right:5px;"></span>글쓰기</button>
+            </a>
+          </div>
+          <div class=board_list>
+            <table>
+              <thead class="tablehead">
+                <tr>
+                  <th id="count">번호</th>
+                  <th style="width:50%">제목</th>
+                  <th id="writer">작성자</th>
+                  <th id="date">날짜</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th id="count" style="width:10%">1</th>
+                  <th id="title" style="width:50%">숙박관련 문의</th>
+                  <th id="writer" style="width:20%">오상민</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">2</th>
+                  <th id="title" style="width:50%">취소관련 문의</th>
+                  <th id="writer" style="width:20%">김명근</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">3</th>
+                  <th id="title" style="width:50%">요금관련 문의</th>
+                  <th id="writer" style="width:20%">김우진</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">4</th>
+                  <th id="title" style="width:50%">취소관련 문의</th>
+                  <th id="writer" style="width:20%">김명근</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">5</th>
+                  <th id="title" style="width:50%">요금관련 문의</th>
+                  <th id="writer" style="width:20%">김우진</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">6</th>
+                  <th id="title" style="width:50%">요금관련 문의</th>
+                  <th id="writer" style="width:20%">김상현</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+                <tr>
+                  <th id="count" style="width:10%">7</th>
+                  <th id="title" style="width:50%">요금관련 문의</th>
+                  <th id="writer" style="width:20%">바겅진</th>
+                  <th id="date" style="width:20%">2016-10-28</th>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        <!--pagination관련 자바스크립트입니다.-->
+          <script>
+          (function($){
+              var paginate = {
+                  startPos: function(pageNumber, perPage) {
+                      // determine what array position to start from
+                      // based on current page and # per page
+                      return pageNumber * perPage;
+                  },
+                  getPage: function(items, startPos, perPage) {
+                      // declare an empty array to hold our page items
+                      var page = [];
+                      // only get items after the starting position
+                      items = items.slice(startPos, items.length);
+
+                      // loop remaining items until max per page
+                      for (var i=0; i < perPage; i++) {
+                          page.push(items[i]); }
+                      return page;
+                  },
+                  totalPages: function(items, perPage) {
+                      // determine total number of pages
+                      return Math.ceil(items.length / perPage);
+                  },
+                  createBtns: function(totalPages, currentPage) {
+                      // create buttons to manipulate current page
+                      var pagination = $('<div style="margin-left:230%" class="pagination" />');
+                      // add a "first" button
+                      pagination.append('<span class="pagination-button">&laquo;</span>');
+                      // add pages inbetween
+                      for (var i=1; i <= totalPages; i++) {
+                          // truncate list when too large
+                          if (totalPages > 5 && currentPage !== i) {
+                              // if on first two pages
+                              if (currentPage === 1 || currentPage === 2) {
+                                  // show first 5 pages
+                                  if (i > 5) continue;
+                          // if on last two pages
+                              } else if (currentPage === totalPages || currentPage === totalPages - 1) {
+                                  // show last 5 pages
+                                  if (i < totalPages - 4) continue;
+                              // otherwise show 5 pages w/ current in middle
+                              } else {
+                                  if (i < currentPage - 2 || i > currentPage + 2) {
+                                      continue; }
+                              }
+                          }
+                          // markup for page button
+                          var pageBtn = $('<span class="pagination-button page-num" />');
+                          // add active class for current page
+                          if (i == currentPage) {
+                              pageBtn.addClass('active'); }
+                          // set text to the page number
+                          pageBtn.text(i);
+                          // add button to the container
+                          pagination.append(pageBtn);
+                      }
+                      // add a "last" button
+                      pagination.append($('<span class="pagination-button">&raquo;</span>'));
+                      return pagination;
+                  },
+                  createPage: function(items, currentPage, perPage) {
+                      // remove pagination from the page
+                      $('.pagination').remove();
+
+                      // set context for the items
+                      var container = items.parent(),
+                          // detach items from the page and cast as array
+                          items = items.detach().toArray(),
+                          // get start position and select items for page
+                          startPos = this.startPos(currentPage - 1, perPage),
+                          page = this.getPage(items, startPos, perPage);
+
+                      // loop items and readd to page
+                      $.each(page, function(){
+                          // prevent empty items that return as Window
+                          if (this.window === undefined) {
+                              container.append($(this)); }
+                      });
+
+                      // prep pagination buttons and add to page
+                      var totalPages = this.totalPages(items, perPage),
+                          pageButtons = this.createBtns(totalPages, currentPage);
+
+                      container.after(pageButtons);
+                  }
+              };
+
+              // stuff it all into a jQuery method!
+              $.fn.paginate = function(perPage) {
+                  var items = $(this);
+
+                  // default perPage to 5
+                  if (isNaN(perPage) || perPage === undefined) {
+                      perPage = 5; }
+
+                  // don't fire if fewer items than perPage
+                  if (items.length <= perPage) {
+                      return true; }
+
+                  // ensure items stay in the same DOM position
+                  if (items.length !== items.parent()[0].children.length) {
+                      items.wrapAll('<div class="pagination-items" />');
+                  }
+
+                  // paginate the items starting at page 1
+                  paginate.createPage(items, 1, perPage);
+
+                  // handle click events on the buttons
+                  $(document).on('click', '.pagination-button', function(e) {
+                      // get current page from active button
+                      var currentPage = parseInt($('.pagination-button.active').text(), 10),
+                          newPage = currentPage,
+                          totalPages = paginate.totalPages(items, perPage),
+                          target = $(e.target);
+
+                      // get numbered page
+                      newPage = parseInt(target.text(), 10);
+                      if (target.text() == '«') newPage = 1;
+                      if (target.text() == '»') newPage = totalPages;
+
+                      // ensure newPage is in available range
+                      if (newPage > 0 && newPage <= totalPages) {
+                          paginate.createPage(items, newPage, perPage); }
+                  });
+              };
+
+          })(jQuery);
+
+          /* This part is just for the demo,
+          not actually part of the plugin */
+          $('tbody tr').paginate(2);
+
+          </script>
+
+
+
+        <hr>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

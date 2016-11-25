@@ -1,0 +1,57 @@
+.tab-pane {
+    background-color: #fff;
+}
+
+.nav.nav-pills {
+    height: 50px;
+}
+
+.nav.nav-pills li {
+    background-color: #ddd;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.nav.nav-pills a {
+    color: #000;
+    font-size: 1.1em;
+}
+
+#accordion1 li.panel{
+    margin-bottom: 0px;
+}
+
+.affix {
+    top: 0px;
+    width: 100%;
+    z-index: 1031;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+}
+
+.navbar-nav.nav-justified {
+    display:table;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+
+
+.navbar .container-fluid {
+    margin-right: auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#myNavbar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.nav.navbar-nav.nav-justified {
+   margin:0;
+}

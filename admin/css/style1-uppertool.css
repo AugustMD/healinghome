@@ -1,0 +1,45 @@
+/* 스크롤바 숨기기 */
+body {
+    padding-top: 52px;
+}
+
+.input-group {
+  position: absolute;
+  max-width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
+  padding-top: 10px;
+}
+
+.navbar-nav.navbar-right a {
+      color: #777;
+}
+
+.navbar-brand {
+    font-family: cursive;;
+}
+
+.collapse ul>li>button {
+    padding: 15px;
+}
+
+.collapse ul>li>button:focus, .collapse ul>li>button:hover, .collapse ul>li>button:active {
+   outline: none;
+}
+
+
+/* modal 로그인 및 가입 버튼 꽉 채우게 하기 위함 */
+#login, #register {
+    background-color: #FB464C;
+    border: 0px;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+}
+
+.btn-link {
+    color: #FB464C;
+}

@@ -1,0 +1,76 @@
+
+.half::before{
+  position: relative;
+  z-index: 9;
+  width: 0%;
+  display: block;
+  overflow: hidden;
+}
+.half::after{
+  content: '\e006';
+  position: absolute;
+  z-index: 8;
+  color: #bdc3c7;
+  top: 0;
+  left: 0;
+}
+.half0::before{
+  width: 0%;
+}
+.half5::before{
+  width: 5%;
+}
+.half10::before{
+  width: 10%;
+}
+.half15::before{
+  width: 15%;
+}
+.half20::before{
+  width: 20%;
+}
+.half25::before{
+  width: 25%;
+}
+.half30::before{
+  width: 30%;
+}
+.half35::before{
+  width: 35%;
+}
+.half40::before{
+  width: 40%;
+}
+.half45::before{
+  width: 45%;
+}
+.half50::before{
+  width: 50%;
+}
+.half55::before{
+  width: 55%;
+}
+.half60::before{
+  width: 60%;
+}
+.half65::before{
+  width: 65%;
+}
+.half70::before{
+  width: 70%;
+}
+.half75::before{
+  width: 75%;
+}
+.half80::before{
+  width: 80%;
+}
+.half85::before{
+  width: 85%;
+}
+.half90::before{
+  width: 90%;
+}
+.half95::before{
+  width: 95%;
+}

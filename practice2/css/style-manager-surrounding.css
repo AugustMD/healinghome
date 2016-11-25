@@ -1,0 +1,108 @@
+
+.container{
+  display: flex;
+}
+.item-first{
+  height: 70px;
+  padding: 10px;
+}
+
+.item-first:nth-child(1){
+  font-size: 45px;
+  flex-basis: 150px;
+}
+.item-first:nth-child(2){
+  flex-basis: 600px;
+  padding: 20px;
+}
+.item-first:nth-child(3){
+  flex-basis: 150px;
+
+}
+.item-first:nth-child(4){
+  flex-basis: 150px;
+}
+.item-first:nth-child(5){
+  flex-basis: 150px;
+}
+.item-first:nth-child(6){
+  flex-basis: 150px;
+}
+.item-first:nth-child(7){
+  flex-basis: 150px;
+}
+.row{
+  border-top: 2px solid blue;
+}
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+  float: left;
+  display:inline-block;
+  width: 25%;
+  text-align: center;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+ul.tab li a{
+  margin: 0px auto;
+  font-size: 17px;
+  font-weight: bold;
+}
+.left-side-margin{
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 3%;
+  border: 2px solid #bfbfbf;
+  padding: 2%;
+}
+.form-group{
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 1%;
+}

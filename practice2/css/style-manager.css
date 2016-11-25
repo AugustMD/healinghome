@@ -1,0 +1,36 @@
+
+.container{
+  display: flex;
+}
+.item-first{
+  height: 70px;
+  padding: 10px;
+}
+
+.item-first:nth-child(1){
+  font-size: 45px;
+  flex-basis: 150px;
+}
+.item-first:nth-child(2){
+  flex-basis: 600px;
+  padding: 20px;
+}
+.item-first:nth-child(3){
+  flex-basis: 150px;
+
+}
+.item-first:nth-child(4){
+  flex-basis: 150px;
+}
+.item-first:nth-child(5){
+  flex-basis: 150px;
+}
+.item-first:nth-child(6){
+  flex-basis: 150px;
+}
+.item-first:nth-child(7){
+  flex-basis: 150px;
+}
+.row{
+  border-top: 2px solid blue;
+}

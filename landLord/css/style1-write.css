@@ -1,0 +1,121 @@
+.SMjumbo {
+    background-image: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/01/REd-Faded-Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+}
+hr {
+  margin: 10px 0px 10px 0px;
+}
+
+.form-inline .form-control{
+  font-size: 13px;
+}
+
+textarea {
+  margin: 10px 0px 15px 0px;
+}
+.messagepop {
+background-color:#FFFFFF;
+border:1px solid #999999;
+cursor:default;
+display:none;
+margin-top: 15px;
+position:absolute;
+text-align:left;
+width:394px;
+z-index:50;
+padding: 25px 25px 20px;
+}
+
+label {
+display: inline-block;;
+margin-bottom: 3px;
+}
+
+.messagepop p, .messagepop.div {
+border-bottom: 1px solid #EFEFEF;
+margin: 8px 0;
+padding-bottom: 8px;
+}
+.row{
+  border-top: 2px solid #0099ff;
+}
+
+.SMjumbo h1{
+  font-weight: 900;
+  font-size: 50px;
+}
+.SMjumbo h2{
+  font-weight: 900;
+}
+.SMjumbo h3{
+  font-weight: 500;
+}
+.SMjumbo p{
+  font-weight: 500;
+}
+.left-side-margin{
+  margin-left: 12%;
+  margin-right: 12%;
+}
+.write{
+  float: right;
+}
+.left-side-margin2{
+  margin-left: 12%;
+  margin-right: 12%;
+}
+.subject{
+  display: flex;
+}
+.form-inline{
+  width: 100%;
+}
+.thumb {
+  width: 10%;
+  height: 75px;
+  border: 1px solid #000;
+  margin: 1%;
+}
+.filebox{
+}
+.filebox label {
+display: inline-block;
+padding: .5em .75em;
+color: #999;
+font-size: inherit;
+line-height: normal;
+vertical-align: middle;
+background-color: #fdfdfd;
+cursor: pointer;
+border: 1px solid #ebebeb;
+border-bottom-color: #e2e2e2;
+border-radius: .25em;
+}
+
+.filebox input[type="file"] {  /* 파일 필드 숨기기 */
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip:rect(0,0,0,0);
+border: 0;
+}
+
+.form-inline label, .content label {
+  font-size: 13px;
+}
+
+.btn-group .btn {
+  font-size: 12px;
+}
+
+.btn-group .btn span {
+  padding-right: 10px;
+}

@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style1-tabbar.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-calendar.css">
+    <link rel="stylesheet" type="text/css" href="./css/paneltab.css">
+    <link rel="stylesheet" type="text/css" href="./css/fakecalendar.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-loadmore.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-item.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-uppertool.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/calendar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pinterest-search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/paneltab.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/surrounding-carousel.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+
+        .navbar {
+            margin-bottom: 0px;
+        }
+
+        .affix~.container-fluid {
+            position: relative;
+            top: 52px;
+        }
+
+        #section1 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #section2 {
+            padding-top: 50px;
+            height: 700px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 50px;
+        }
+
+        #section3 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #section4 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #section5 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        #section6 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:focus,
+        .navbar-inverse .navbar-nav>.active>a:hover {
+            background-color: #FB464C;
+            height: 50px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: #eee;
+            margin-bottom: 0px;
+        }
+
+        .navbar-inverse li {
+            text-align: center;
+        }
+
+        .navbar-inverse {
+            border-radius: 0px;
+            background-color: gray;
+            color: #fff;
+            border: 0px;
+        }
+
+        .navbar-inverse .navbar-nav>li>a {
+            color: #eee;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 0px;
+        }
+
+        .col-md-6 {
+            padding-right: 0px;
+        }
+
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 130%;
+            margin: auto;
+            height: 350px;
+        }
+
+        .info_cont .days li {
+            height: 50px;
+        }
+
+        .navbar-inverse .navbar-toggle,
+        .navbar-inverse .navbar-collapse,
+        .navbar-inverse .navbar-form {
+            border-color: #eee;
+        }
+
+        h3 {
+            margin-top: 10px;
+            color: #444;
+            margin-top: 10;
+            margin-bottom: .5rem;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 400;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .nav-justified>li {
+                width: 16.67%;
+            }
+        }
+
+        .navbar-inverse .navbar-toggle {
+            margin-right: 30px;
+        }
+
+        .thumbnail {
+            padding: 0px;
+            border-radius: 0;
+        }
+
+        h4 {
+            color: darkslategrey;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--=================================== 상단 툴바 ===================================-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="border-bottom-width:2px; background-color: #fff;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand topnav" href="./index.html" style="color: #FB464C;"><strong>HealingHome</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-sm-offset-2 col-md-5 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">로그인</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./service.html" style="text-decoration: none; color: #FB464C;">고객센터</a></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=================================== 로그인 모달 ===================================-->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">로그인</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="********">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">로그인</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>아직 가입을 안하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal1">회원가입</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=================================== 회원가입 모달 ===================================-->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal 내용-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">회원가입</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">이메일:</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" placeholder="이메일을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="name">이름:</label>
+                            <div class="col-sm-8">
+                                <input type="name" class="form-control" id="name" placeholder="이름을 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">비밀번호:</label>
+                            <div class="col-sm-8">
+                                <input type="password" class="form-control" id="pwd" placeholder="비밀번호를 입력하시오">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pnumber">휴대폰번호:</label>
+                            <div class="col col-sm-8">
+                                <input type="phone-number" class="form-control" id="pnumber" placeholder="'-'없이 입력하시오">
+                                <div class="col-sm-offset-1">
+                                    <button type="submit" class="btn btn-default">실명확인</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-8">
+                                <button type="submit" class="btn btn-primary" id="login">가입하기</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p>이미 가입하셨습니까?
+                        <button type="link" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#myModal">로그인</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--=================================== 펜션 정보 ===================================-->
+    <div class="headline">
+        <!--=================================== 펜션 기본 정보 ===================================-->
+        <div class="row">
+            <!-- Carousel 슬라이더 형식의 펜션 사진 -->
+            <div class="col-md-6">
+                <div class="slider">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="http://img100.yanolja.com//20160115/20160115183823c4056131-7c01-4c80-9c2f-1ed568da08c3.jpg" alt="Chania" width="460" height="300">
+                            </div>
+
+                            <div class="item">
+                                <img src="http://yaimg.yanolja.com/files/2016/1018/20161018101203f2aab542-3a35-44b9-a5f8-a09023c104b5.jpg" alt="Chania" width="460" height="300">
+                            </div>
+
+                            <div class="item">
+                                <img src="http://yaimg.yanolja.com/files/2016/1018/20161018101220acbcadcf-2c6b-4e30-ad63-25b0d542ba56.jpg" alt="Flower" width="460" height="300">
+                            </div>
+
+                            <div class="item">
+                                <img src="http://yaimg.yanolja.com/files/2016/1013/201610131021378546d83d-5285-45a7-aeed-61f7d6b15946.jpg " alt="Flower" width="460" height="300">
+                            </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="width:1%; background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin-left: 8px;"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="width:1%; background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="margin-right: 15px;"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 펜션 기본 정보 -->
+            <div class="col-md-6">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="">
+                            <h3 style="margin-bottom:8px; padding-left:15px;">[강화도]강화 뉴아모테 펜션</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="pull-right" style="padding-right:18%;">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h6><strong>상세주소 </strong></h6>
+                        </div>
+                        <div class="col-md-9">
+                            <h6>인천 강화군 화도리 사기리 493-5</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h6><strong>전화번호 </strong></h6>
+                        </div>
+                        <div class="col-md-9">
+                            <h6>010 5932 1313</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h6><strong>입퇴실 시간 </strong></h6>
+                        </div>
+                        <div class="col-md-9">
+                            <h6 style="display:flex; margin-bottom:0px;"><p style="color: cornflowerblue; margin-right:5px;">[입실시간]</p> 15시 이후 <p style="color: cornflowerblue; margin-right:5px; margin-left:5px;">[퇴실시간] </p> 11시 이전</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h6><strong>성수기 </strong></h6>
+                        </div>
+                        <div class="col-md-9">
+                            <h6 style="display:flex; margin-bottom:0px;"><p style="color: cornflowerblue; margin-right:5px;">[여름 성수기]</p> 2016-07-19~2016-08-31</h6>
+                            <h6 style="display:flex; margin-top:0px; margin-bottom:0px;"><p style="color: cornflowerblue; margin-right:5px;">[겨울 성수기] </p> 없음</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <h6><strong>비고 </strong></h6>
+                        </div>
+                        <div class="col-md-9">
+                            <h6>#남이섬과 5분 거리</h6>
+                        </div>
+                    </div>
+                    <container>
+                        <div class="row">
+                            <div class="col-md-11" style="margin-right:30px;">
+                                <button data-toggle="pill" href="#section6" type="button" class="btn btn-lg" style="width:100%" onclick="reserve()">
+                                <p style="font-size:15px; margin-bottom:0px;">찜하기</p>
+                            </button>
+                            </div>
+                        </div>
+                    </container>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--=================================== 탭 부분 ===================================-->
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="350">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav nav-justified">
+                        <li><a href="#section1">요금 및 시간</a></li>
+                        <li><a href="#section2">예약현황</a></li>
+                        <li><a href="#section3">찾아오시는 길</a></li>
+                        <li><a href="#section4">주변 관광지</a></li>
+                        <li><a href="#section5">이용 후기</a></li>
+                        <li id="reserve"><a href="#section6">예약하기</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid">
+        <div class="info_title">
+            <h3>요금 및 시간</h3>
+        </div>
+        <div class="info_cont">
+            <h4 style="margin-bottom: 0px;">숙박 이용요금</h4>
+
+            <p style="float: right;"><span class="glyphicon glyphicon-ok" style="color: black;" aria-hidden="true"></span>
+                <strong style="font-size:12px; margin-right:15px;">비성수기</strong>
+                <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #e62a4a;"></span>
+                <strong style="color: #e62a4a; font-size:12px;">성수기</strong></p>
+            <table class="rent_price_table" style="width:100%;">
+                <thead>
+                    <td align="center" class="dayclassify">구분</td>
+                    <td align="center" class="dayclassify">일, 월, 화, 수, 목</td>
+                    <td align="center" class="dayclassify">금, 토 (공휴일)</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center">2인</td>
+                        <td align="center">25,000원<br>
+                            <p>30,000원</p>
+                        </td>
+                        <td align="center">30,000원<br>
+                            <p>40,000원</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">3인<br></td>
+                        <td align="center">37,000원<br>
+                            <p>42,000원</p>
+                        </td>
+                        <td align="center">40,000원<br>
+                            <p>50,000원</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">4인<br></td>
+                        <td align="center">50,000원<br>
+                            <p>55,000원</p>
+                        </td>
+                        <td align="center">55,000원<br>
+                            <p>60,000원</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <h4 style="margin-bottom: 30px;">숙박 시간</h4>
+            <table class="rent_price_table timetable" style="width:100%;">
+                <thead>
+                    <td align="center" class="head dayclassify">구분</td>
+                    <td align="center" class="dayclassify">내용</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="head" align="center">입실</td>
+                        <td class="substance">입실은 이용당일 15:00시부터 19:00시까지 입니다.<br>
+                            이용당일 19:00시까지 입실을 아니한 경우에는 예약이 자동 취소됩니다.<br>
+                            (단, 입실마감시간에 입실하지 못하는 사유를 연락주시면 24시까지 입실이 가능합니다.)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">퇴실</td>
+                        <td class="substance">퇴실은 12시입니다. 꼭 지켜주시기 바랍니다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">환불기준</td>
+                        <td class="substance">이용일 5일전 취소시 : 90%<br>
+                            이용일 4일전 취소시 : 70%<br>
+                            이용일 3일전 취소시 : 60%<br>
+                            이용일 2일전 취소시 : 50%<br>
+                            이용일 1일전 취소시 : 환불불가<br>
+                            이용일 당 일 취소시 : 환불불가<br>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 style="margin-bottom: 30px; margin-top:50px;">옵션</h4>
+            <table class="rent_price_table timetable" style="width:100%;">
+                <thead>
+                    <td align="center" class="head dayclassify">구분</td>
+                    <td align="center" class="dayclassify">내용</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="head" align="center">픽업</td>
+                        <td class="substance">
+                            대중교통으로 역까지 오시면 픽업이 가능합니다.(커플만 가능)<br>
+                            숙박예약 하실 때 함께 픽업 요청은 필수랍니다.(펜션까지 6분정도 소요)<br>
+                            <p>픽업가능 시간 : 오후 3시부터 가능합니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">바베큐</td>
+                        <td class="substance">
+                            바베큐 파티에 필요한 숯+그릴을 대여 해드리고 있습니다.
+                            <p>숯+그릴 가격 : 가족단체 20,000원 , 커플객실 10,000원</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">프로젝터 대여</td>
+                        <td class="substance">
+                            프로젝터로 영화감상을 원하시면 노트북을 꼭 가지고 오셔야 하며, 미리 실시간 예약란에 예약해 주세요.
+                            <p>프로젝터 대여비 : 10,000원</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">브런치</td>
+                        <td class="substance">
+                            커플객실을 이용하시는 분에 한해서 브런치를 무료로 이용 하실 수 있어요.<br>
+                            메뉴는 계절에 따라 변경될 수 있습니다.
+                            <p>이용안내 : 오전 9시 30분 ~ 오전 10시 30분까지</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">자전거 대여</td>
+                        <td class="substance">
+                            펜션에서 조금 더 즐거운 시간을 보내시라고 자전거를 무료로 대여해 드려요.<br>
+                            필요하신 분은 펜션지기에 말씀해 주세요.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">썰매 대여</td>
+                        <td class="substance">
+                            추운 겨울이 되면 홍천강이 꽁꽁 얼어붙어 넓은 강위에서 얼음 썰매를 타실 수 있어요.<br>
+                            펜션지기에게 말씀해 주시면 썰매를 무료로 대여해 드립니다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head" align="center">이벤트</td>
+                        <td class="substance">
+                            특별한 날, 사랑하는 사람에게 감동을 선물해 주세여.<br>
+                            전화로 문의 주세요.
+                            <p>비용 안내</p>
+                            <p style="margin-left:30px;">
+                                케익 + 꽃다발 + 고급와인 = 100,000원<br>
+                                케익 + 꽃다발 + 고급와인 + 풍선장식 or 티라이트 = 150,000원<br>
+                                케익 + 꽃다발 + 고급와인 + 풍선장식 + 티라이트 = 150,000원<br>
+                                카나페 + 꽃다발 + 고급와인 = 120,000원
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="section2" class="container-fluid">
+        <div class="info_title">
+            <h3>예약현황</h3>
+        </div>
+
+        <div class="info_cont">
+            <div class="month">
+                <ul>
+                    <li class="prev">❮</li>
+                    <li class="next">❯</li>
+                    <li style="text-align:center">
+                        August<br>
+                        <span style="font-size:18px">2016</span>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="weekdays">
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+                <li>Su</li>
+            </ul>
+
+            <ul class="days">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li><span class="active">10</span></li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+            </ul>
+        </div>
+    </div>
+    <div id="section3" class="container-fluid">
+        <div class="info_title">
+            <h3>찾아오시는 길</h3>
+        </div>
+        <!-- 다음 지도 API -->
+        <div class="info_cont">
+            <div id="map" style="width:100%;height:600px;"></div>
+            <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7a297cffb2223c9ae48c91f0f766d82e"></script>
+            <script>
+                var container = document.getElementById('map');
+                var options = {
+                    center: new daum.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+
+                var map = new daum.maps.Map(container, options);
+            </script>
+
+            <!-- 펜션 주소 -->
+            <p class="room_name">펜션 주소</p>
+            <p class="tab_txt">
+                <!-- 2015-09-16 Dong : 다음 신주소 API 기능 추가. -->
+
+                구주소 : [417-863] 인천 강화군 화도면 장화리 285-7<br/> 신주소 : [417-863] 인천 강화군 화도면 해안남로 2506-16
+                <!-- 2015-09-16 Dong : 다음 신주소 API 기능 추가. -->
+                <br><br>
+                <font color="#0099FF"> 펜션 연락처는 예약이 완료되면, 이메일과 핸드폰 문자메세지로 자동 발송되며 출발 전 펜션 연락처를 숙지하시어 가는길 안내를 보다 자세히 받으시기 바랍니다. <br>
+                </font>
+                <font color="#0099FF">특히 장마철이나 눈이 많이 내리는 겨울의 경우는 출발전 도로상태를 꼭 체크해 주세요.</font>
+            </p>
+            <p class="room_name">펜션 찾아가는 길</p>
+            <p class="tab_stit">자가용</p>
+            <p class="tab_txt"><strong>서울 방향에서 오실때</strong><br>김포공항(48번국도) - 청송마을(현대아파트) - 누신삼거리,좌회전(365번 지방도,강화, 대&#44279;,양촌방면) - 양촌 사거리, 우회전(초지대교 방면) - 초지대교 넘어 우회전 - 전등사 - SK주유소 - 마니산 방향 - 선수 및 석모도 선착장 - 고벵이펜션<br><br><strong>초지대교 (초지대교를 이용하시면 더 빠르게 오실 수 있습니다.)</strong><br>초지대교
+                건너 우회전 - 삼거리에서 좌회전 - 길상(전등사) - 사거리 직진 - 마니산 방향 - 사거리 좌회전 - 화도면 - 터미널 - 선수 포구- 고벵이펜션<br><br><strong>강화대교(강화읍에서 출발)</strong><br>강화대교 - 터미널 - 찬우물 삼거리,우회전(외포리 방향) - 인산리 전수지,좌회전(화도,마니산 방향) - 화도터미널,우회전 - 선수포구 - 고벵이펜션<br><br>-동막해수욕장에서 오시면 강화갯벌센터
+                - 가나안주유소 - 인천학생종합수련원 - 고벵이펜션<br>초지대교 건너 동막해수욕장 해안도로 이용시 약 20분 더 소요됩니다. </p>
+            <p class="tab_stit">대중교통</p>
+            <p class="tab_txt"><strong>※오실때</strong><br>김포국제공항 국제선에서 60-5번 승차 후 화도터미널에서 하차<br>*서울역/신촌역/홍대입구역/합정역 : M6117번<br>*광화문/서울시청/공덕역(2번출구)/여의도환승센터 : 8600번<br>*강남역/논현역/고속터미널 : M6427번<br>*영등포역(신세계백화점맞은편) : 8000번,60-3번<br>*당산역(13번출구) : 8600 / 8000 / 60-3<br>*송정역(중) :
+                8000번, 22번. 60-3번<br>김포한강신도시 복합환승센터에서 60-2번으로 환승하여 화도터미널에서 하차하시면 됩니다.<br><br>화도터미널 하차 후 여차리행 버스를 타시고 낙조마을에서 하차하시면 됩니다.<br>※ 여차리행버스(1시간에 한대)<br><br><strong>※가실때<br></strong>화도터미널에서 60-5번 승차후 김포공항에서 하차<br>화도터미널에서 60-2번 승차후 복합환승센터에서 환승하시면
+                됩니다.</p>
+            <div class="mt20">
+                <p class="ex_msg">본 사이트에 등록된 펜션 관련 내용은 HealingHome의 창작물로 무단 도용 시 법적인 책임을 질 수 있습니다.</p>
+                <p class="ex_msg">HealingHome에 등록된 모든 펜션의 상업적인 촬영은 반드시 미리 말씀 하셔야 합니다.</p>
+                <p class="ex_msg">사전 업무 협조 없이 현장에서 촬영을 하실 경우 입실이 거부 될 수 있습니다.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="section4" class="container-fluid">
+        <div class="info_title">
+            <h3>주변 관광지 정보</h3>
+        </div>
+        <!-- 주변 관광지마다 탭을 설정 -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#surroundingNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+
+                </div>
+                <div>
+                    <div class="collapse navbar-collapse" id="surroundingNavbar">
+                      <ul class="tab nav navbar-nav ">
+                          <li class="active"><a data-toggle="pill" href="#Location1">강화 갯벌센터</a></li>
+                          <li><a data-toggle="pill" href="#Location2">강화 아르미애월드</a></li>
+                          <li><a data-toggle="pill" href="#Location3">강화 오상리 고인돌군</a></li>
+                          <li><a data-toggle="pill" href="#Location4">강화 인삼센터</a></li>
+                          <li><a data-toggle="pill" href="#Location5">강화 지석묘</a></li>
+                          <li><a data-toggle="pill" href="#Location6">강화 풍물시장</a></li>
+                          <li><a data-toggle="pill" href="#Location7">강화역사관/갑곶돈대</a></li>
+                          <li><a data-toggle="pill" href="#Location8">강화평화전망대</a></li>
+                          <li><a data-toggle="pill" href="#Location9">강화향교</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <!-- 첫번째 탭 -->
+            <div id="Location1" class="tab-pane fade in active">
+                <div class="info_title">
+                    <h4>강화 갯벌센터</h4>
+                </div>
+                <div class="surrounding-inner">
+                    <table class="table">
+                        <tr>
+                            <td id="division">상세주소</td>
+                            <td id="contents">인천시 강화군 화도면 여차리 934-6</td>
+                        </tr>
+                        <tr>
+                            <td id="division">문의전화</td>
+                            <td id="contents">032-937-5057</td>
+                        </tr>
+                        <tr>
+                            <td id="division">홈페이지</td>
+                            <td id="contents"> <a href="http://tidalflat.ganghwa.incheon.kr">http://tidalflat.ganghwa.incheon.kr</a></td>
+
+                        </tr>
+                    </table>
+                    <div class="container" style="width:100%">
+                        <div id="main_area">
+                            <!-- Slider -->
+                            <div class="row">
+                                <div class="col-xs-12" id="slider">
+                                    <!-- Top part of the slider -->
+                                    <div class="row">
+                                        <div class="col-sm-8" id="carousel-bounding-box">
+                                            <div class="carousel slide" id="myCarousel2">
+                                                <!-- Carousel items -->
+                                                <div class="carousel-inner">
+                                                    <div class="active item" data-slide-number="0">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924452.jpg"></div>
+
+                                                    <div class="item" data-slide-number="1">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924453.jpg"></div>
+
+                                                    <div class="item" data-slide-number="2">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924454.jpg"></div>
+
+                                                    <div class="item" data-slide-number="3">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924455.jpg"></div>
+
+                                                    <div class="item" data-slide-number="4">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924456.jpg"></div>
+
+                                                    <div class="item" data-slide-number="5">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924457.jpg"></div>
+                                                </div>
+                                                <!-- Carousel nav -->
+                                                <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4" style="height:350; overflow:slider">
+                                            <!--/Slider-->
+                                            <div class="row hidden-xs" id="slider-thumbs">
+                                                <!-- Bottom switcher of slider -->
+                                                <ul class="hide-bullets">
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-0"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924452.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-1"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924453.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-2"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924454.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-3"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924455.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-4"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924456.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector-5"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2009231924457.jpg"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="tab_txt" id="tourMemo">
+                        강화도 남단의 갯벌은 세계 4대 갯벌중의 하나로서 천연기념물 제419호로 지정되었으며 그 크기가 여의도의 52.7배에 달합니다. <br> 이에 우리 강화군에서는 여차리 갯벌을 한눈에 내려다볼 수 있는 자연친화적인 통나무 갯벌센터를 2005년에 설립하여 밀물 썰물의 드나듦을 알 수 있는 수족관 및 저어새 모형의 전시관을 설치하고 2층은 전망대 디오라마 전시실을 마련하였습니다.<br> 또한, 강화갯벌센터에
+                        방문하시면 갯벌과 생물, 갯벌의 중요성 등 재미있는 갯벌이야기와 더불어 농게의 힘자랑, 염생식물 관찰, 저어새 관찰 등이 가능하여 갯벌을 체계적으로 전달할 수 있는 교육의 장소가 될 것입니다. <br>
+                        <br>
+                        <br>
+                        <div class="txt_div">
+                            <div class="txt_contents">
+                                <div class="tit"><strong>이용시간</strong></div>
+                                <div class="txt">09:00~18:00<br><strong><font color="#ff0000">※ 매표시간-관람시간 1시간 전<br></font></strong></div>
+                            </div>
+                            <div class="txt_contents">
+                                <div class="tit"><strong>쉬는날</strong></div>
+                                <div class="txt">매주 월요일<br></div>
+                            </div>
+                            <div class="txt_contents">
+                                <div class="tit"><strong>관람소요시간</strong></div>
+                                <div class="txt">50분 소요<br></div>
+                            </div>
+                        </div>
+                    </p>
+                </div>
+
+            </div>
+            <!-- 두번째 탭 -->
+            <div id="Location2" class="tab-pane fade">
+                <div class="info_title">
+                    <h4>강화 아르미애월드</h4>
+                </div>
+                <div class="surrounding-inner">
+                    <table class="table">
+                        <tr>
+                            <td id="division">상세주소</td>
+                            <td id="contents">인천 강화군 불은면 중앙로 742-2</td>
+                        </tr>
+                        <tr>
+                            <td id="division">문의전화</td>
+                            <td id="contents">032-930-4114</td>
+                        </tr>
+                        <tr>
+                            <td id="division">홈페이지</td>
+                            <td id="contents"> <a href="http://www.armiae.com">http://www.armiae.com</a></td>
+
+                        </tr>
+                    </table>
+                    <div class="container" style="width:100%">
+                        <div id="main_area">
+                            <!-- Slider -->
+                            <div class="row">
+                                <div class="col-xs-12" id="slider">
+                                    <!-- Top part of the slider -->
+                                    <div class="row">
+                                        <div class="col-sm-8" id="carousel-bounding-box">
+                                            <div class="carousel slide" id="myCarousel3">
+                                                <!-- Carousel items -->
+                                                <div class="carousel-inner">
+                                                    <div class="active item" data-slide-number="0">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2013102117232.jpg"></div>
+
+                                                    <div class="item" data-slide-number="1">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2013102117233.jpg"></div>
+
+                                                    <div class="item" data-slide-number="2">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172331.jpg"></div>
+
+                                                    <div class="item" data-slide-number="3">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172332.jpg"></div>
+
+                                                    <div class="item" data-slide-number="4">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172333.jpg"></div>
+
+                                                    <div class="item" data-slide-number="5">
+                                                        <img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172334.jpg"></div>
+                                                </div>
+                                                <!-- Carousel nav -->
+                                                <a class="left carousel-control" href="#myCarousel3" role="button" data-slide="prev">
+                                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                                </a>
+                                                <a class="right carousel-control" href="#myCarousel3" role="button" data-slide="next">
+                                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-4" style="height:350; overflow:slider">
+                                            <!--/Slider-->
+                                            <div class="row hidden-xs" id="slider-thumbs2">
+                                                <!-- Bottom switcher of slider -->
+                                                <ul class="hide-bullets">
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-0"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2013102117232.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-1"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/2013102117233.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-2"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172331.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-3"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172332.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-4"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172333.jpg"></a>
+                                                    </li>
+
+                                                    <li class="col-sm-6">
+                                                        <a class="thumbnail" id="carousel-selector2-5"><img src="http://www.wooripension.com//woori_scm/uploaded_files/tour/20131021172334.jpg"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="tab_txt" id="tourMemo">
+                        1999년 4월 26일 인천광역시기념물 제47호로 지정되었다. 강화도 고려산(高麗山:436m) 남쪽 기슭에 자리잡고 있으며 해발고도 75m의 나지막한 산에 고인돌 12기(基)가 한곳에 모여 있다.<br> 한국 청동기시대의 대표적 무덤양식인 고인돌은 지석묘, 돌멘(dolmen)이라고도하며 대체로 북방식·남방식·개석식 등의 3종으로 분류한다.<br> 강화군 내가면 오상리의 고인돌 가운데 인천광역시기념물 제16호로
+                        지정되어 있는 내가 지석묘(內可支石墓)는 전형적인 북방식 고인돌로 지상에 4면을 판석으로 막아 묘실을 설치한 뒤 대형 판석 한 장을 덮은 모양으로 고인돌의 돌방[石室] 축조 구조를 정확히 알 수 있는 가장 완벽한 원형 상태를 유지하고 있다.<br> 그밖의 고인돌은 거의 원형을 알 수 없을 정도로 무너져 있다. 오상리 고인돌군은 내가 지석묘를 중심으로 고려산 서남쪽 능선에 북방식과 남방식 고인돌이 고루 분포해
+                        있다.<br> 오상리 고인돌군에서는 모두 12기의 고인돌이 분포하고 있는데, 2000년 실시된 발굴조사에 의하면 모두 북방식 고인돌이라 한다.<br> 고인돌의 묘실구조는 ＇ㅍ＇자 형태이고, 크기는 대·중·소형으로 구분된다. 무문토기와 대롱옥, 반달돌칼, 화살촉 등 매우 다양한 유물이 출토되었다.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 세번째 탭 -->
+            <div id="Location3" class="tab-pane fade">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="section5" class="container-fluid">
+        <div class="info_title">
+            <h4 style="padding-top: 1%;">리뷰 (235개)</h4>
+        </div>
+        <div class="info_cont">
+            <div class="Reviewcontent">
+                <div class="reviewallaverage">
+                    <div class="average">평점</div>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    <span><strong>9.2</strong></span>
+                </div>
+                <div class="container ratingsummury" style="padding-top:15px;">
+                    <div class="container" style="margin-bottom:15px; padding:0px;">
+                        <div class="container col-sm-1 hidden-xs" style="padding-left:15px; font-weight:normal">
+                            요약
+                        </div>
+
+                        <div class="container col-sm-3">
+                            시설
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> &nbsp;9.7
+                            </div>
+                        </div>
+
+                        <div class="container col-sm-3">
+                            서비스
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> &nbsp;9.5
+                            </div>
+                        </div>
+
+                        <div class="container col-sm-3">
+                            청결
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> &nbsp;9.6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container" style="margin-bottom:15px; padding:0px;">
+                        <div class="container col-sm-offset-1 col-sm-3">
+                            위치
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> &nbsp;8.4
+                            </div>
+                        </div>
+
+                        <div class="container col-sm-3">
+                            가격
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> &nbsp;5.5
+                            </div>
+                        </div>
+
+                        <div class="container col-sm-3">
+                            정확성
+                            <div class="reviewallcontentstar">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> &nbsp;8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Reviewcontent2" style="background: #fff;">
+                <!-- Left-aligned -->
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>HealingHome회원1234</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.10.10</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">6.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>모든업체가 그렇지만 사진보다는 많이 작아요 그래도 인테리어도 이쁘고 아기자기 합니다.샤워가운은 그 일대 모든 업체랑 비슷하듯이 세제냄새가 강하게 남아있어요. 샤워시설이 욕조 안에있는데 높이가 높아서 조심해야겠어요 자칫하다가는 넘어질수있겠더라구요. 이건 뭐 구조특성상 그러려니 합니다. 세면대 옆에 콘센트가 안되더군요 헤어드라이기 사용하려구 거울식으로된 창문으로가서 머리를 말려야만 했습니다.
+                                    욕조마개는 반 부셔져서 물이 받아지질 않아요 물이 스물스물 새더군요. 마지막으로 충격적이게 바퀴벌레 한마리 잡았습니다......불끄고 누워서 티비보다 불켰는데 벌레한마리가 지나가길래 보니 바퀴벌레 더군요..청결에 신경을 쓰셔야 될것같습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>구떼맘</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.7.30</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>7월20~21일에 2명이서 다녀왔어요. 러브2 이용했어요. 방이 널찍하고 깔끔하게 정리되어 있었어요. 방문에 방충망이 설취되어 있어서 벌레유입 막아줘서 좋았어요. (바닥이 타일이라서 실내화가 있으면 좋겠다는 생각이 들긴 했어요. 그리고 방음이 좀 아쉬워요. 단체손님 경우 다들 신나게 노시다보니 큰 소리를 내셔서 약간 불편하더라구요. ) 특히, 서비스가 친절하고 부대시설이 좋더라구요. 개별
+                                    바베큐 테라스와 월풀이 있어서 좋았구요. 여러 부대시설을 자유롭게 이용할 수 있는 점이 좋았어요. 1박 2일로는 살짝 아쉬운 느낌이 들 정도였어요. 저는 탁구장, 수영장, 노래방(1만5천원)을 이용했구요. 카페도 가고 놀이기구도 타고 싶었는데 이래저래 놀다 보니 시간이 부족해서 이용하지 못했는데 가족단위로 오시면 정말 유용할 것 같아요. 수영장도 넓은 편이고 물이 깨끗했어요. 산 높이
+                                    있어서 펜션에서 내려다보는 마을과 산이 참 예쁘고 분위기가 좋아요. 덕분에 잘 놀다왔어요♡"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>마종구</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.05.02</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>제 여친과 휴가 어디를 갈까 망설이다 <br><br> 연인끼리 남도쪽으론 순천만 갈대길이 좋타고 하여 그곳과 가장가깝고 깨끗한곳을 찾다가 순천만포시즌펜션을.... <br><br> 감각적인 내부 디자인에 이주변에서 가장 깨끗하고 여유있게 후회없이 머물수 있던곳이라 생각됩니다. 다음에 또 기회가 되면.... "</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>부부여행행</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.05.02</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>비수기라서 한가한 하겠지만 조용하게 두 부부는 잠도 실컷자고 게으름을 피고 왔답니다. 팬션지기님과는 많은 대화는 못 나누었지만  암튼 정다운 마음을 갖고 왔지요  경주에 가면 다시 한 번 들려야겠지요.팬션지기님 건강하세요^^^^</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>여기펜션</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.05.02</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>학기 중에 열심히 일했던 나에게 주어진 스스로의 힐링을 찾아서 나서게 된 여행이었다. 나와 함께한 친구들도 학생들 가르치느라, 대학 보내느라 힘들었던 의미있는 시간을 뒤로 하고 나선 이 자연향기의 여행에 듬뿍 빠져 들었다. 조용한 곳을 원했던 우리들은 이 곳이 무척이나 마음에 들었으며 아침을 여는 상쾌한 음악과 아침이슬은 우리 여행을 더욱 기분 좋게 해주는매개체였다. 아담하게 꾸며진 객실과 깔끔하게 만들어 놓은 바베큐 장은 까칠하기로 소문난 나의 친구도 흡족해 했다. 더불어 친절한 사장님과 아침의 상쾌한 등산으로 잊지 못할 여행을 한 우리 동기들은 다음에도 꼭 다시 오자며 약속해 본다. 이 기분으로 12월을 잘 정리해 본다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>조만호</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.05.02</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>무작정 계획도 없이 떠났던 거제도 여행. <br>준비도 없이 떠났던만큼 숙박지도 결정을 못해 걱정이었는데 다행히 숙박지를 찾아 묵게 된 가시버시펜션! <br>친절하게 가격도 조금 깍아주시고 저녁식사 땐 멍게에 굴에 새조개까지 주셔서 정말 맛있게 먹고 편하게 푹 쉬다 왔습니다^^ <br>시설도 깔끔하니 좋도 무엇보다 너무 친절하게 대해주셔서 기분좋게 지내다 왔습니다! <br>다음에 거제도에 또 놀러가게 된다면 또 묵고 싶네요^^</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review">
+
+                    <div class="bubble">
+                        <div class="user col-sm-3" style="text-align:center">
+                            <img src="./img/img_avatar1.png" class="img-circle" style="width:70px; height:70px;">
+                            <h6>이연희</h6>
+                        </div>
+                        <div class="reviewcomment col-sm-9">
+                            <div class="ratingsection">
+                                <span class="reviewdate"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>2016.05.02</span>
+                                <span class="reviewstar">
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                </span>
+                                <span class="ratingnum">10.0</span>
+                            </div>
+                            <div class="reviewtext">
+                                <p>안녕하세요 저녁 늦게 와서 고기 구워 먹느라 실장님 괴롭혔던 이연희 커플입니다 <br>다시한번 감사하고요 일부러 후기 올립니다 <br>일단 펜션이 뭐 방만 이쁘면 되고 전망만 좋으면 되겠지만 <br>무어를 말해도 귀찮아 안하시고 조리있게 설명해주시는 실장님덕에 <br>기분좋은 여행이 되었습니다 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" id="loadMore">더보기</a>
+
+                <script>
+                $(function () {
+                    $(".Reviewcontent2 .bubble").slice(0, 3).show();
+                    $("#loadMore").on('click', function (e) {
+                        e.preventDefault();
+                        $(".Reviewcontent2 .bubble:hidden").slice(0, 2).slideDown();
+                        if ($(".Reviewcontent2 .bubble:hidden").length == 0) {
+                            $("#load").fadeOut('slow');
+                        }
+                    });
+                });
+
+                $('a[href=#top]').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 600);
+                    return false;
+                });
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('.totop a').fadeIn();
+                    } else {
+                        $('.totop a').fadeOut();
+                    }
+                });
+
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="section6" class="container-fluid">
+        <div class="info_title">
+            <h4 style="padding-top: 1%;">예약</h4>
+        </div>
+        <div class="info_cont container">
+          <div class="col-md-6">
+              <h2>체크인</h2>
+              <div class="item2-search"><input type="text" id="datepicker1" class="form-control" placeholder="체크인"></div>
+          </div>
+
+          <div class="col-md-6">
+              <h2>체크아웃</h2>
+              <div class="item2-search"><input type="text" id="datepicker2" class="form-control" placeholder="체크아웃"></div>
+          </div>
+
+          <div class="col-md-12" style="padding-right:0px;">
+              <h2>숙박인원</h2>
+
+              <div class="info" style="border: 0;">
+                  <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" id="roomchoice" class="btn btn-default formgroup-order">
+                        <h4>숙박 인원 2인</h4>
+                        <div>
+                            <h3 style="font-size:10px; margin-top:14px;">&nbsp;/ 일</h3>
+                            <h3 id="price">25,000원</h3>
+                        </div>
+                      </button>
+                      <button type="button" id="roomchoice" class="btn btn-default formgroup-order">
+                        <h4>숙박 인원 3인</h4>
+                        <div>
+                            <h3 style="font-size:10px; margin-top:14px;">&nbsp;/ 일</h3>
+                            <h3 id="price">35,000원</h3>
+                        </div>
+                      </button>
+                      <button type="button" id="roomchoice" class="btn btn-default formgroup-order">
+                        <h4>숙박 인원 4인</h4>
+                        <div>
+                            <h3 style="font-size:10px; margin-top:14px;">&nbsp;/ 일</h3>
+                            <h3 id="price">45,000원</h3>
+                        </div>
+                      </button>
+                      <script>
+                      jQuery('button').click(function(){
+                         jQuery(this).toggleClass('active');
+                      });
+                      </script>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-12" style="padding-right:0px;">
+              <h2>옵션</h2>
+
+              <div class="info" style="border: 0;">
+                  <div style="display:flex; border-radius:4px;">
+                      <div class="form-group">
+                          <select class="form-control">
+                        <option>&nbsp;옵션 선택</option>
+                        <option>&nbsp;바베큐 +10,000</option>
+                        <option>&nbsp;프로젝터 대여 +10,000</option>
+                        <option>&nbsp;이벤트A +100,000</option>
+                        <option>&nbsp;이벤트B +150,000</option>
+                        <option>&nbsp;이벤트C +150,000</option>
+                        <option>&nbsp;이벤트D +120,000</option>
+                      </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-12" style="padding-right:0px; border-bottom:1px dotted #ddd;">
+              <h2>결제 정보</h2>
+              <div style="margin-top:20px;"></div>
+              <div style="float:left;">
+                  <p id="reservename">강화 뉴아모테 펜션</p>
+                  <div class="detailreserve" style="display:flex">
+                      <p style="margin-right:20px;">2인</p>
+                      <p id="datepickerReserve1">2016-11-12</p>
+                      <p>~</p>
+                      <p id="datepickerReserve2">2016-11-14</p>
+                      <p>+ 바베큐 + 프로젝터 대여 + 이벤트B</p>
+                  </div>
+              </div>
+              <div id="reserveprice" style="float:right;">
+                  <p>300,000원</p>
+              </div>
+          </div>
+
+          <div class="col-md-12" style="padding-right:0px;">
+            <div style="margin-top:20px;"></div>
+              <button type="button" class="btn btn-warning" style="background-color: coral; border-color: #ff9700; height:40px; font-size:15px; width:100%;">
+          결제하기</button>
+          </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

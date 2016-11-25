@@ -1,0 +1,114 @@
+.SMjumbo {
+    background-image: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/01/REd-Faded-Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+}
+
+.messagepop {
+background-color:#FFFFFF;
+border:1px solid #999999;
+cursor:default;
+display:none;
+margin-top: 15px;
+position:absolute;
+text-align:left;
+width:394px;
+z-index:50;
+padding: 25px 25px 20px;
+}
+
+label {
+display: inline-block;;
+margin-bottom: 3px;
+padding-left: 15px;
+text-indent: -15px;
+}
+
+.messagepop p, .messagepop.div {
+border-bottom: 1px solid #EFEFEF;
+margin: 8px 0;
+padding-bottom: 8px;
+}
+.row{
+  border-top: 2px solid #0099ff;
+}
+/*CUSTOMER의 새로운 CSS부분입니다. */
+.SMjumbo{
+  padding: 2%;
+  text-align: center;
+}
+.SMjumbo h1{
+  font-weight: 900;
+  font-size: 50px;
+}
+.SMjumbo h2{
+  font-weight: 900;
+}
+.SMjumbo h3{
+  font-weight: 500;
+}
+.SMjumbo p{
+  font-weight: 500;
+}
+.left-side-margin{
+  margin-left: 12%;
+  margin-right: 12%;
+}
+.write{
+  float: right;
+}
+table{
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tablehead th{
+  background-color: #f2f2f2;
+  border-width: 1px 0;
+  border-color: #dedede;
+  color: #333;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-size: 13px;
+
+}
+tbody th{
+  background-color: #ffffff;
+  border-width: 1px 0;
+  border-color: #000000;
+  border-bottom: 1px dotted #cccccc;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 13px;
+}
+.pagination {
+}
+.pagination-button {
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+tbody th#title {
+  text-align: left;
+  padding-left: 15px;
+}
+
+tbody th#count {
+  width: 10%;
+}
+
+tbody th#writer {
+  width: 20%;
+}
+tbody #date {
+  width: 20%;
+}

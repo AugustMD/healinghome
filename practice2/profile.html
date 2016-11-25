@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/style1-tabbar.css">
+    <link rel="stylesheet" type="text/css" href="./css/paneltab.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-pinterest.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-uppertool.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style1-profile.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/paneltab.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pinterest.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<style>
+    body {
+        position: relative;
+    }
+
+    .affix {
+        top: 0;
+        width: 100%;
+        z-index: 9999 !important;
+    }
+
+    .navbar {
+        margin-bottom: 0px;
+    }
+
+    .affix~.container-fluid {
+        position: relative;
+        top: 52px;
+    }
+
+    #section1 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #section2 {
+        padding-top: 50px;
+        background-color: #f8f8f8;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 50px;
+    }
+
+    #section3 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+
+    .navbar-inverse .navbar-nav>.active>a,
+    .navbar-inverse .navbar-nav>.active>a:focus,
+    .navbar-inverse .navbar-nav>.active>a:hover {
+        background-color: #FB464C;
+        height: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: #eee;
+        margin-bottom: 0px;
+    }
+
+    .navbar-inverse li {
+        text-align: center;
+    }
+
+    .navbar-inverse {
+        border-radius: 0px;
+        background-color: gray;
+        color: #fff;
+        border: 0px;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+        color: #eee;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 0px;
+    }
+
+    .col-md-6 {
+        padding-right: 0px;
+    }
+
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 130%;
+        margin: auto;
+        height: 350px;
+    }
+
+    .info_cont .days li {
+        height: 50px;
+    }
+
+    .navbar-inverse .navbar-toggle,
+    .navbar-inverse .navbar-collapse,
+    .navbar-inverse .navbar-form {
+        border-color: #eee;
+    }
+
+    h3 {
+        margin-top: 10px;
+        color: #444;
+        margin-top: 10;
+        margin-bottom: .5rem;
+        -webkit-font-smoothing: antialiased;
+        font-weight: 400;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .nav-justified>li {
+            width: 33.3%;
+        }
+    }
+
+    .navbar-inverse .navbar-toggle {
+        margin-right: 30px;
+    }
+
+    .thumbnail {
+        padding: 0px;
+        border-radius: 0;
+    }
+
+    .white-panel a {
+        color: grey;
+    }
+</style>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!--=================================== 상단 툴바 ===================================-->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation" style="border-bottom-width:2px; background-color: #fff;">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand topnav" href="./index.html" style="color: #FB464C;"><strong>HealingHome</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-sm-offset-2 col-md-5 ">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                      <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./index.html" style="color:#777">로그아웃</a></button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./profile.html" style="color:#777">마이페이지</a></button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-link"><a href="./service.html" style="text-decoration: none; color: #FB464C;">고객센터</a></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!--=================================== 프로필 부분 ===================================-->
+
+        <header class="profile text-center">
+            <div class="profileinner container">
+                <img src="./img/img_avatar1.png" alt="프로필" class="img-circle" id="logo">
+                <p>
+                    <a href="./profile.html"><strong>홍길동 고객님</strong></a>의
+                    <p>회원정보</p>
+                </p>
+            </div>
+        </header>
+
+
+    <!--=================================== 탭 부분 ===================================-->
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="350">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+
+            </div>
+            <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav nav-justified">
+                        <li><a href="#section1">예약현황</a></li>
+                        <li><a href="#section2">이용현황</a></li>
+                        <li><a href="#section3">찜한펜션</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid">
+        <div class="info_title">
+            <h3>이용현황</h3>
+        </div>
+        <div class="info_cont">
+            <table class="rent_price_table" style="width:100%;">
+                <thead>
+                    <td align="center" class="dayclassify">예약번호</td>
+                    <td align="center" class="dayclassify">예약정보</td>
+                    <td align="center" class="dayclassify">결제정보</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" id="reserveid">2773BD31</td>
+                        <td class="substance" align="center">
+                          <a href="./house.html">
+                              <img src="http://ucd.hwstatic.com/propertyimages/8/84300/7.jpg" class="img-polaroid voc_list_preview_img">
+                              <p class="text-center">가평 아리따움</p>
+                          </a>
+                        </td>
+                        <td align="center">48,000원</td>
+                    </tr>
+                    <tr>
+                        <td align="center" id="reserveid">78577BS1</td>
+                        <td class="substance" align="center">
+                          <a href="./house.html">
+                              <img src="http://ucd.hwstatic.com/propertyimages/9/99448/5016.jpg" class="img-polaroid voc_list_preview_img">
+                              <p class="text-center">타임 트래블러 파티 호스텔</p>
+                          </a>
+                        </td>
+                        <td align="center">94,000원</td>
+                    </tr>
+                    <tr>
+                        <td align="center" id="reserveid">1892KGS5</td>
+                        <td class="substance" align="center">
+                            <a href="./house.html">
+                                <img src="http://ucd.hwstatic.com/propertyimages/8/85904/184.jpg" class="img-polaroid voc_list_preview_img">
+                                <p class="text-center">다운 타운 게스트하우스</p>
+                            </a>
+                        </td>
+                        <td align="center">173,000원</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="section2" class="container-fluid">
+        <div class="info_title">
+            <h3>예약현황</h3>
+        </div>
+
+        <div class="info_cont">
+            <table class="rent_price_table" style="width:100%;">
+                <thead>
+                    <td align="center" class="dayclassify">예약번호</td>
+                    <td align="center" class="dayclassify">예약정보</td>
+                    <td align="center" class="dayclassify">결제정보</td>
+                    <td align="center" class="dayclassify">이용후기</td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="center" id="reserveid">2773BD31</td>
+                        <td class="substance" align="center">
+                          <a href="./house.html">
+                              <img src="http://ucd.hwstatic.com/propertyimages/8/84300/7.jpg" class="img-polaroid voc_list_preview_img">
+                              <p class="text-center">가평 아리따움</p>
+                          </a>
+                        </td>
+                        <td align="center">48,000원</td>
+                        <td align="center">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" id="reserveid">78577BS1</td>
+                        <td class="substance" align="center">
+                          <a href="./house.html">
+                              <img src="http://ucd.hwstatic.com/propertyimages/9/99448/5016.jpg" class="img-polaroid voc_list_preview_img">
+                              <p class="text-center">타임 트래블러 파티 호스텔</p>
+                          </a>
+                        </td>
+                        <td align="center">94,000원</td>
+                        <td align="center">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" id="reserveid">1892KGS5</td>
+                        <td class="substance" align="center">
+                            <a href="./house.html">
+                                <img src="http://ucd.hwstatic.com/propertyimages/8/85904/184.jpg" class="img-polaroid voc_list_preview_img">
+                                <p class="text-center">다운 타운 게스트하우스</p>
+                            </a>
+                        </td>
+                        <td align="center">173,000원</td>
+                        <td align="center">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="section3" class="container-fluid">
+        <div class="info_title">
+            <h3>찜한펜션</h3>
+        </div>
+        <div class="info_cont">
+          <div class="row" style="margin-left:15px;margin-right:15px;">
+              <hr style="border-color: lightgrey;">
+              <section id="pinBoot">
+
+                  <article class="white-panel"><img src="http://ucd.hwstatic.com/propertyimages/8/80406/7.jpg" alt="">
+                      <h4><a href="./house.html">이태원 G 게스트홈 인서울</a></h4>
+                  </article>
+
+                  <article class="white-panel"> <img src="http://ucd.hwstatic.com/propertyimages/8/80823/31.jpg" alt="">
+                      <h4><a href="./house.html">김치 강남 게스트하우스</a></h4>
+                  </article>
+
+                  <article class="white-panel"> <img src="http://ucd.hwstatic.com/propertyimages/7/70144/2.jpg" alt="">
+                      <h4><a href="./house.html">김치 동대문 게스트하우스</a></h4>
+                  </article>
+
+
+                  <article class="white-panel"> <img src="http://ucd.hwstatic.com/propertyimages/9/91860/1.jpg" alt="">
+                      <h4><a href="./house.html">KpopStay</a></h4>
+                  </article>
+              </section>
+          </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+/* scroll fixes */
+.modal-open .location.modal {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  overflow-y: scroll;
+}
+
+button[id^="btnlocation-"] {
+  width: 11.75%;
+  margin-bottom: 10px;
+  background-color: lightsalmon;
+  color: #fff;
+}
+
+button[id^="btndetaillocation-"] {
+  width: 19.25%;
+  margin-bottom: 10px;
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.btn-default.back {
+   font-size: 13px;
+   margin-right: 10px;
+}

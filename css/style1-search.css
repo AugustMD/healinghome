@@ -1,0 +1,91 @@
+/* 상단 툴바와의 경계선 */
+.row {
+    height: 100%;
+}
+
+/***********************************************************/
+/******************** 지역 핀터레스트 추가 **********************/
+/***********************************************************/
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.caption {
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+/***********************************************************/
+/************************ 좌측 화면 **************************/
+/***********************************************************/
+.col-md-7 {
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: fixed;
+    height: 100%;
+}
+
+.col-md-7 .row {
+  margin-left: 15px;
+
+}
+
+/* 상세 검색 각 층 */
+.search-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-menu1 {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.search-menu h5 {
+  font-size: 14px;
+  padding-left: 25px;
+  width: 140px;
+}
+
+.search-items {
+  width: 35%;
+}
+
+.filter {
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.filter .btn {
+  font-size: 11px;
+}
+
+
+/***********************************************************/
+/************************ 우측 화면 **************************/
+/***********************************************************/
+/* 지도 */
+.col-md-5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+
+#map {
+    float: left;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,283 @@
+.land-info .content-box-large {
+    padding: 40px;
+}
+
+.land-info td h5, .land-info td a, .land-info th {
+  font-size: 13px;
+}
+
+.land-info .panel-body button {
+  width: 100%;
+  color: #fff;
+}
+.land-info .panel-body .btn-judging span, .land-info .panel-body .btn-return span {
+  top:2px;
+}
+.land-info .btn-judging {
+    background-color: #E69215;
+}
+
+.land-info .btn-complete {
+    background-color: #443647;
+}
+
+.land-info .btn-return {
+    background-color: #C73935;
+}
+
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.item3{
+    position: relative;
+    left: 5%;
+}
+
+.thumb {
+    margin-bottom: 15px;
+
+}
+.img-responsive {
+  height: 100px !important;
+}
+
+.thumbnail {
+    margin-bottom: 0px !important;
+    background-color: #eee !important;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+    border-color: #ddd;
+}
+
+
+.table td {
+   padding-top: 8px !important;
+   padding-bottom: 8px !important;
+}
+
+.table th {
+   text-align: center;
+   vertical-align: middle !important;
+   background-color: #F7F7F8;
+   color: #333333;
+   width: 20%;
+}
+
+.table tbody>tr>td.vert-align{
+    vertical-align: middle;
+}
+
+.table tbody>tr>th.vert-align{
+    vertical-align: middle;
+}
+
+.tdContainer a {
+    font-size: 14px;
+    font-weight: 500;
+    color: dimgrey;
+    line-height: 1.1;
+    color: inherit;
+}
+
+/* 첨부자료  관련 CSS입니다.*/
+.filebox label {
+display: inline-block;
+padding: .4em .75em;
+font-size: 13px;
+line-height: normal;
+vertical-align: middle;
+background-color: #5bc0de;
+cursor: pointer;
+border: 1px solid #46b8da;
+color: #fff;
+border-radius: 4px;
+font-weight: normal;
+}
+.filebox input[type="file"] {  /* 파일 필드 숨기기 */
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip:rect(0,0,0,0);
+border: 0;
+}
+
+td input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 28px;
+  font-size: 13px;
+}
+
+
+.col-xs-offset-right-12 {
+  margin-right: 100%;
+}
+.col-xs-offset-right-11 {
+  margin-right: 91.66666667%;
+}
+.col-xs-offset-right-10 {
+  margin-right: 83.33333333%;
+}
+.col-xs-offset-right-9 {
+  margin-right: 75%;
+}
+.col-xs-offset-right-8 {
+  margin-right: 66.66666667%;
+}
+.col-xs-offset-right-7 {
+  margin-right: 58.33333333%;
+}
+.col-xs-offset-right-6 {
+  margin-right: 50%;
+}
+.col-xs-offset-right-5 {
+  margin-right: 41.66666667%;
+}
+.col-xs-offset-right-4 {
+  margin-right: 33.33333333%;
+}
+.col-xs-offset-right-3 {
+  margin-right: 25%;
+}
+.col-xs-offset-right-2 {
+  margin-right: 16.66666667%;
+}
+.col-xs-offset-right-1 {
+  margin-right: 8.33333333%;
+}
+.col-xs-offset-right-0 {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .col-sm-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-sm-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-sm-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-sm-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-sm-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-sm-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-sm-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-sm-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-sm-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-sm-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-sm-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-sm-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-sm-offset-right-0 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-md-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-md-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-md-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-md-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-md-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-md-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-md-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-md-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-md-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-md-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-md-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-md-offset-right-0 {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-offset-right-12 {
+    margin-right: 100%;
+  }
+  .col-lg-offset-right-11 {
+    margin-right: 91.66666667%;
+  }
+  .col-lg-offset-right-10 {
+    margin-right: 83.33333333%;
+  }
+  .col-lg-offset-right-9 {
+    margin-right: 75%;
+  }
+  .col-lg-offset-right-8 {
+    margin-right: 66.66666667%;
+  }
+  .col-lg-offset-right-7 {
+    margin-right: 58.33333333%;
+  }
+  .col-lg-offset-right-6 {
+    margin-right: 50%;
+  }
+  .col-lg-offset-right-5 {
+    margin-right: 41.66666667%;
+  }
+  .col-lg-offset-right-4 {
+    margin-right: 33.33333333%;
+  }
+  .col-lg-offset-right-3 {
+    margin-right: 25%;
+  }
+  .col-lg-offset-right-2 {
+    margin-right: 16.66666667%;
+  }
+  .col-lg-offset-right-1 {
+    margin-right: 8.33333333%;
+  }
+  .col-lg-offset-right-0 {
+    margin-right: 0;
+  }
+}

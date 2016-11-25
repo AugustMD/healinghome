@@ -1,0 +1,48 @@
+.Reviewcontent2 .bubble  {
+    display:none;
+    background: #fafafa;
+	  border: 1px solid #e8e8e8;
+    width: 100%;
+    padding:10px;
+    font-family:arial;
+    margin:0 auto;
+    font-size:14px;
+    border-radius:4px;
+    margin: 10px 0px 10px 0px;
+}
+.totop {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+.totop a {
+    display: none;
+}
+.Reviewcontent2 a,.Reviewcontent2  a:visited {
+    color: #33739E;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+.Reviewcontent2 a:hover {
+    text-decoration: none;
+}
+#loadMore {
+    padding: 10px;
+    text-align: center;
+    background-color: coral;
+    color: #fff;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 4px;
+    transition: all 600ms ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+}
+#loadMore:hover {
+    background-color: #fafafa;
+    color: grey;
+    border: 1px solid #e8e8e8;
+}
